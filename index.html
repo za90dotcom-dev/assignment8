@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/icons8-food-bar-64.png" type="image/x-icon">
+    <title>What's for Dinner</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="bg-white shadow-sm border-bottom border-warning-subtle py-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between px-lg-3">
+            <!-- Logo + Title -->
+            <div class="d-flex align-items-center gap-3 ">
+                <div class="rounded-circle d-flex align-items-center justify-content-center shadow logo-left">
+                    <i class="fas fa-utensils text-white"></i>
+                </div>
+                <div>
+                    <h1 class="h4 fw-bold text-dark m-0">What's For Dinner</h1>
+                    <p class="text-muted small m-0">Your daily meal inspiration</p>
+                </div>
+            </div>
+
+
+            <!-- Desktop Nav -->
+            <div class="d-none d-md-flex align-items-center gap-4">
+                <button class="btn btn-link text-secondary nav-icon  p-0">
+                    <i class="fas fa-bookmark"></i></button>
+                <button class="btn btn-link text-secondary nav-icon p-0">
+                    <i class="fas fa-clock-rotate-left"></i></button>
+                <button class="btn btn-link text-secondary nav-icon p-0">
+                    <i class="fas fa-gear"></i></button>
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg"
+                    class="rounded-circle border border-warning" width="40" height="40" alt="Profile" />
+            </div>
+
+
+            <!-- Mobile Nav Toggle -->
+            <button class="btn d-md-none text-secondary" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                <i class="fas fa-bars fs-3"></i>
+            </button>
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="collapse border-top border-warning-subtle mt-3">
+            <div class="container-fluid py-3 d-flex flex-column gap-3">
+                <button class="btn btn-link text-secondary text-start nav-icon text-decoration-none"><i
+                        class="fas fa-bookmark me-2"></i>Saved
+                    Recipes</button>
+                <button class="btn btn-link text-secondary text-start nav-icon text-decoration-none"><i
+                        class="fas fa-clock-rotate-left me-2"></i>Recent</button>
+                <button class="btn btn-link text-secondary text-start nav-icon text-decoration-none"><i
+                        class="fas fa-gear me-2"></i>Settings</button>
+                <button
+                    class="btn btn-link text-secondary text-start d-flex align-items-center gap-2 nav-icon text-decoration-none">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" width="32"
+                        height="32" class="rounded-circle border border-warning" />
+                    Profile
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid py-4">
+        <section class="recipe-card">
+            <div id="demo" class="row g-0">
+            
+                <div class="col-lg-5">
+                    <div class="recipe-image-container position-relative">
+                        <img id="recipe-image"
+                            src="https://images.unsplash.com/photo-1633504581786-316c8002b1b9?q=80&w=800&auto=format&fit=crop"
+                            alt="Shrimp Scampi" class=" w-100 h-100 object-fit-cover">
+
+                        <!-- Rating Badge -->
+                        <div class="rating-badge">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-star text-warning me-2"></i>
+                                <span class="fw-bold text-dark" id="ratingsAverage">4.8</span>
+                                <span class="text-muted ms-1" id="ratingsQuantity">(356 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Stats Container -->
+                        <div class="stats-container">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <i class="fas fa-clock text-warning stat-icon"></i>
+                                    <p class="stat-label">Prep Time</p>
+                                    <p class="stat-value" id="prepTime">10 min</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-fire-burner text-danger stat-icon"></i>
+                                    <p class="stat-label">Cook Time</p>
+                                    <p class="stat-value" id="cookTime">15 min</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-users text-primary stat-icon"></i>
+                                    <p class="stat-label">Servings</p>
+                                    <p class="stat-value" id="servings">2 people</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-7">
+                    <div class="p-4 p-lg-5  content-right  ">
+                        <!-- Header with title and action buttons -->
+                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-4 ">
+                            <div class="mb-3 mb-md-0">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span id="difficulty" class="badge-custom badge-easy me-2">Easy</span>
+                                    <span id="category" class="badge-custom badge-category">Seafood</span>
+                                </div>
+                                <h1 class="h2 fw-bold text-dark mb-2" id="name">Shrimp Scampi</h1>
+                                <p class="text-muted" id="description">Garlicky shrimp in white wine butter sauce
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <button class="icon-btn me-2">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="icon-btn">
+                                    <i class="fas fa-share-nodes"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Time Warning  -->
+                        <div id="time-warning"  class="warning-alert"  
+                         >
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-triangle-exclamation text-danger me-3 fs-5"></i>
+                                <div>
+                                    <p class="fw-semibold text-danger mb-1">Extended Preparation Time</p>
+                                    <p id="second-paragraph" class="text-danger mb-0 small">
+                                        This recipe requires more than 45 minutes to prepare. Plan accordingly!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tabs Navigation -->
+                        <div class="border-bottom mb-4">
+                            <div class="row g-0 text-center" id="nav-tab" role="tablist">
+                                <div class="col-3">
+                                    <button class="tab-button nav-link active w-100" id="ingredients-tab"
+                                        data-bs-toggle="tab" data-bs-target="#ingredients-tab-pane" type="button"
+                                        role="tab" aria-controls="ingredients-tab-pane" aria-selected="true">
+                                        <i class="fas fa-list-check me-1 d-none d-md-inline"></i>
+                                        <span class="text-truncate">Ingredients</span>
+                                    </button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="tab-button nav-link w-100" id="instructions-tab" data-bs-toggle="tab"
+                                        data-bs-target="#instructions-tab-pane" type="button" role="tab"
+                                        aria-controls="instructions-tab-pane" aria-selected="false">
+                                        <i class="fas fa-book-open me-1 d-none d-md-inline"></i>
+                                        <span class="text-truncate">Instructions</span>
+                                    </button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="tab-button nav-link w-100" id="nutrition-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nutrition-tab-pane" type="button" role="tab"
+                                        aria-controls="nutrition-tab-pane" aria-selected="false">
+                                        <i class="fas fa-chart-pie me-1 d-none d-md-inline"></i>
+                                        <span class="text-truncate">Nutrition</span>
+                                    </button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="tab-button nav-link w-100" id="tips-tab" data-bs-toggle="tab"
+                                        data-bs-target="#tips-tab-pane" type="button" role="tab"
+                                        aria-controls="tips-tab-pane" aria-selected="false">
+                                        <i class="fas fa-lightbulb me-1 d-none d-md-inline"></i>
+                                        <span class="text-truncate">Chef's Tips</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="nav-tabContent">
+                            <!-- Ingredients Tab -->
+                            <div class="tab-pane  fade show active" id="ingredients-tab-pane" role="tabpanel"
+                                aria-labelledby="ingredients-tab" tabindex="0">
+                                <div class="ingredients-list">
+                                    <ul class="list-unstyled mb-0" id="ingredients-list">
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">1</div>
+                                            <span>400g large shrimp, peeled</span>
+                                        </li>
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">2</div>
+                                            <span>300g linguine pasta</span>
+                                        </li>
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">3</div>
+                                            <span>6 cloves garlic, minced</span>
+                                        </li>
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">4</div>
+                                            <span>1/2 cup white wine</span>
+                                        </li>
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">5</div>
+                                            <span>4 tablespoons butter</span>
+                                        </li>
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">6</div>
+                                            <span>2 tablespoons olive oil</span>
+                                        </li>
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">7</div>
+                                            <span>Fresh parsley, chopped</span>
+                                        </li>
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">8</div>
+                                            <span>Lemon juice and zest</span>
+                                        </li>
+                                        <li class="ingredient-item">
+                                            <div class="ingredient-number">9</div>
+                                            <span>Red pepper flakes</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Instructions Tab -->
+                            <div class="tab-pane  fade" id="instructions-tab-pane" role="tabpanel"
+                                aria-labelledby="instructions-tab" tabindex="0">
+                                <div class="instructions-list" id="instructions-list">
+                                    <div class="instruction-step">
+                                        <div class="step-number">1</div>
+                                        <div>
+                                            <p class="mb-0">Cook linguine according to package directions. Reserve 1 cup
+                                                pasta water.</p>
+                                        </div>
+                                    </div>
+                                    <div class="instruction-step">
+                                        <div class="step-number">2</div>
+                                        <div>
+                                            <p class="mb-0">Heat olive oil and 2 tablespoons butter in a large pan. Add
+                                                garlic and red pepper flakes, cook for 1 minute.</p>
+                                        </div>
+                                    </div>
+                                    <div class="instruction-step">
+                                        <div class="step-number">3</div>
+                                        <div>
+                                            <p class="mb-0">Add shrimp, cook until pink on both sides, about 3-4
+                                                minutes.
+                                                Remove and set aside.</p>
+                                        </div>
+                                    </div>
+                                    <div class="instruction-step">
+                                        <div class="step-number">4</div>
+                                        <div>
+                                            <p class="mb-0">Add white wine to pan, simmer for 2 minutes. Add remaining
+                                                butter and lemon juice.</p>
+                                        </div>
+                                    </div>
+                                    <div class="instruction-step">
+                                        <div class="step-number">5</div>
+                                        <div>
+                                            <p class="mb-0">Return shrimp to pan, add cooked pasta and toss. Add pasta
+                                                water
+                                                if needed.</p>
+                                        </div>
+                                    </div>
+                                    <div class="instruction-step">
+                                        <div class="step-number">6</div>
+                                        <div>
+                                            <p class="mb-0">Garnish with parsley, lemon zest, and serve immediately.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Nutrition Tab -->
+                            <div class="tab-pane  fade" id="nutrition-tab-pane" role="tabpanel"
+                                aria-labelledby="nutrition-tab" tabindex="0">
+                                <div class="row g-3 mx-0" id="nutrition-list">
+                                    <div class="col-md-6">
+                                        <div class="nutrition-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="nutrition-icon-container bg-warning bg-opacity-25">
+                                                    <i class="fas fa-fire text-warning"></i>
+                                                </div>
+                                                <span class="fw-medium">Calories</span>
+                                            </div>
+                                            <span class="nutrition-value" id="calories">520 kcal</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="nutrition-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="nutrition-icon-container bg-primary bg-opacity-25">
+                                                    <i class="fas fa-dumbbell text-primary"></i>
+                                                </div>
+                                                <span class="fw-medium">Protein</span>
+                                            </div>
+                                            <span class="nutrition-value" id="protein">36g</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="nutrition-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="nutrition-icon-container bg-warning bg-opacity-25">
+                                                    <i class="fas fa-wheat-awn text-warning"></i>
+                                                </div>
+                                                <span class="fw-medium">Carbohydrates</span>
+                                            </div>
+                                            <span class="nutrition-value" id="carbs">54g</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="nutrition-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="nutrition-icon-container bg-danger bg-opacity-25">
+                                                    <i class="fas fa-droplet text-danger"></i>
+                                                </div>
+                                                <span class="fw-medium">Fat</span>
+                                            </div>
+                                            <span class="nutrition-value" id="fat">18g</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="nutrition-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="nutrition-icon-container bg-success bg-opacity-25">
+                                                    <i class="fas fa-seedling text-success"></i>
+                                                </div>
+                                                <span class="fw-medium">Fiber</span>
+                                            </div>
+                                            <span class="nutrition-value" id="fiber">3g</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="nutrition-item">
+                                            <div class="d-flex align-items-center">
+                                                <div class="nutrition-icon-container bg-pink bg-opacity-25">
+                                                    <i class="fas fa-cube text-pink"></i>
+                                                </div>
+                                                <span class="fw-medium">Sodium</span>
+                                            </div>
+                                            <span class="nutrition-value" id="sodium">620mg</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tips Tab -->
+                            <div class="tab-pane  fade" id="tips-tab-pane" role="tabpanel" aria-labelledby="tips-tab"
+                                tabindex="0">
+                                <div class="tips-list" id="tips-list">
+                                    <div class="tip-item d-flex align-items-start">
+                                        <i class="fas fa-circle-check tip-icon"></i>
+                                        <p class="mb-0">Don't overcook shrimp - they cook very quickly</p>
+                                    </div>
+                                    <div class="tip-item d-flex align-items-start">
+                                        <i class="fas fa-circle-check tip-icon"></i>
+                                        <p class="mb-0">Use good quality white wine for best flavor</p>
+                                    </div>
+                                    <div class="tip-item d-flex align-items-start">
+                                        <i class="fas fa-circle-check tip-icon"></i>
+                                        <p class="mb-0">Toss pasta in sauce for maximum flavor absorption</p>
+                                    </div>
+                                    <div class="tip-item d-flex align-items-start">
+                                        <i class="fas fa-circle-check tip-icon"></i>
+                                        <p class="mb-0">Add extra lemon for bright, fresh taste</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mt-4 pt-4 border-top">
+                            
+                            <button class="action-btn me-3" id="try-another-btn" onclick="generateMeal()">
+                                <i class="fas fa-rotate me-2"></i>Try Another Recipe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
